@@ -1,0 +1,7 @@
+{
+  "name": "Agyl Informática",
+  "description": "Página oficial da Agyl Informática - Especialistas em soluções de TI, suporte técnico e consultoria tecnológica.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
