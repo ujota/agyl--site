@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { askAgylAI } from '../services/gemini.ts';
+import { askAgylAI } from '../services/gemini';
 
 interface Message {
   role: 'user' | 'bot';
