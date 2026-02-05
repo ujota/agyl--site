@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { SERVICE_CATEGORIES, WHATSAPP_LINK } from '../constants';
+import { SERVICE_CATEGORIES, WHATSAPP_LINK } from '../constants.ts';
 
 export const ServicesSection: React.FC = () => {
   const getWhatsAppMessage = (categoryTitle: string) => {
@@ -59,24 +59,15 @@ export const ServicesSection: React.FC = () => {
                 </a>
               </div>
 
-              {/* Decorative Icon - Hidden on small mobile to avoid noise */}
+              {/* Decorative Icon */}
               <div className="absolute top-4 right-4 opacity-5 text-blue-500 text-3xl md:text-4xl z-0 group-hover:scale-110 transition-transform duration-500">
                 <i className={`fas ${category.icon}`}></i>
               </div>
-
-              {/* Shopping Bag Icon - Adjusted for mobile */}
-              {category.title === "ATENDIMENTO E SUPORTE" && (
-                <div className="absolute bottom-20 right-4 opacity-5 pointer-events-none z-0 hidden sm:block">
-                   <div className="w-16 h-16 border-4 border-blue-400 rounded-xl flex items-center justify-center">
-                      <i className="fas fa-shopping-bag text-3xl text-blue-400"></i>
-                   </div>
-                </div>
-              )}
             </div>
           ))}
         </div>
 
-        {/* CTA Card - Optimized for Mobile */}
+        {/* CTA Card */}
         <div className="mt-12 md:mt-20 bg-blue-500 rounded-2xl md:rounded-3xl p-6 md:p-12 text-white flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-8 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 -mt-12 -mr-12 w-64 h-64 bg-blue-400 rounded-full opacity-20 blur-3xl"></div>
           <div className="text-center lg:text-left relative z-10">
