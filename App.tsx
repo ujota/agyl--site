@@ -1,11 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { ServicesSection } from './components/ServicesSection';
-import { ContactSection } from './components/ContactSection';
-import { Footer } from './components/Footer';
-import { AIAssistant } from './components/AIAssistant';
+import { Header } from './components/Header.tsx';
+import { Hero } from './components/Hero.tsx';
+import { ServicesSection } from './components/ServicesSection.tsx';
+import { ContactSection } from './components/ContactSection.tsx';
+import { Footer } from './components/Footer.tsx';
+import { AIAssistant } from './components/AIAssistant.tsx';
 
 const App: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
