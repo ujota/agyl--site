@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
-import { Header } from './components/Header.tsx';
-import { Hero } from './components/Hero.tsx';
-import { ServicesSection } from './components/ServicesSection.tsx';
-import { ContactSection } from './components/ContactSection.tsx';
-import { Footer } from './components/Footer.tsx';
-import { AIAssistant } from './components/AIAssistant.tsx';
+import { Header } from './components/Header';
+import { Hero } from './components/Hero';
+import { ServicesSection } from './components/ServicesSection';
+import { ContactSection } from './components/ContactSection';
+import { Footer } from './components/Footer';
+import { AIAssistant } from './components/AIAssistant';
 
 const App: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -32,14 +32,11 @@ const App: React.FC = () => {
       </main>
       <Footer />
       
-      {/* AI Assistant Floating Button */}
       <div className="fixed bottom-6 left-4 sm:left-6 z-40">
         <AIAssistant />
       </div>
 
-      {/* Floating Action Group (Right Side) */}
       <div className="fixed bottom-6 right-4 sm:right-6 flex flex-col gap-3 z-40 items-center">
-        {/* Floating WhatsApp Button */}
         <a 
           href="https://wa.me/5511972247142" 
           target="_blank" 
@@ -50,7 +47,6 @@ const App: React.FC = () => {
           <i className="fab fa-whatsapp text-xl sm:text-2xl group-hover:scale-110 transition-transform"></i>
         </a>
 
-        {/* Scroll to Top */}
         <button
           onClick={scrollToTop}
           className={`p-3 sm:p-4 bg-blue-600 text-white rounded-full shadow-2xl transition-all duration-300 hover:bg-blue-700 active:scale-90 ${
