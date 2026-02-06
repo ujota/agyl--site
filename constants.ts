@@ -2,6 +2,7 @@ export const CONTACT_PHONE = "(11) 97224-7142";
 export const WHATSAPP_LINK = "https://wa.me/5511972247142";
 export const EMAIL = "contato.agylinformatica@gmail.com";
 export const LOCATION_FOCUS = "Embu-Guaçu e região";
+export const INSTAGRAM_URL = "https://www.instagram.com/agylinformatica/";
 
 export interface ServiceCategory {
   title: string;
