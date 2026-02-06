@@ -1,7 +1,7 @@
-
 export const CONTACT_PHONE = "(11) 97224-7142";
 export const WHATSAPP_LINK = "https://wa.me/5511972247142";
 export const EMAIL = "contato.agylinformatica@gmail.com";
+export const LOCATION_FOCUS = "Embu-Guaçu e região";
 
 export interface ServiceCategory {
   title: string;
@@ -11,31 +11,33 @@ export interface ServiceCategory {
 
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
-    title: "SERVIÇOS TÉCNICOS",
+    title: "ASSISTÊNCIA TÉCNICA",
     icon: "fa-laptop-medical",
     items: [
-      "Limpeza de Pc's e Notebook",
-      "Formatação com backup de dados",
-      "Instalação de programas",
-      "Atualização de Sistema, drives e BIOS"
+      "Limpeza e manutenção de PC e Notebook",
+      "Formatação rápida com backup seguro",
+      "Instalação de programas e Windows",
+      "Resolução de lentidão e travamentos"
     ]
   },
   {
-    title: "MONTAGEM PERSONALIZADA",
+    title: "MONTAGEM DE MÁQUINAS",
     icon: "fa-microchip",
     items: [
-      "Consultoria para escolha de peças",
-      "PC's gamer, trabalho, estudo ou uso geral",
-      "Montagem de Pc's e testes"
+      "Consultoria para compra de peças",
+      "PC's Gamer de alta performance",
+      "Estações de trabalho e estudo",
+      "Upgrade de componentes (SSD, RAM)"
     ]
   },
   {
-    title: "ATENDIMENTO E SUPORTE",
+    title: "SUPORTE LOCAL",
     icon: "fa-house-laptop",
     items: [
-      "Atendimento a domicílio",
-      "Suporte remoto",
-      "Agendamento fácil via WhatsApp"
+      "Atendimento em domicílio (Embu-Guaçu)",
+      "Suporte remoto para urgências",
+      "Soluções para Home Office",
+      "Configuração de redes e Wi-Fi"
     ]
   }
 ];

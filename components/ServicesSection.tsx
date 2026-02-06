@@ -1,11 +1,10 @@
-
 import React from 'react';
-import { SERVICE_CATEGORIES, WHATSAPP_LINK } from '../constants';
+import { SERVICE_CATEGORIES, LOCATION_FOCUS } from '../constants';
 
 export const ServicesSection: React.FC = () => {
   const getWhatsAppMessage = (categoryTitle: string) => {
     const baseUrl = "https://wa.me/5511972247142";
-    const message = encodeURIComponent(`Olá! Vi o site da Agyl Informática e gostaria de solicitar um orçamento para: ${categoryTitle}`);
+    const message = encodeURIComponent(`Olá! Vi o site da Agyl Informática e gostaria de um orçamento sem compromisso para: ${categoryTitle}. Sou de Embu-Guaçu/região.`);
     return `${baseUrl}?text=${message}`;
   };
 
@@ -13,10 +12,10 @@ export const ServicesSection: React.FC = () => {
     <section id="servicos" className="py-16 md:py-24 bg-gray-50 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <h2 className="text-blue-500 font-bold tracking-widest uppercase mb-3 text-sm md:text-base">Especialidades</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">Nossos Serviços Prestados</h3>
-          <p className="text-gray-600 text-base md:text-lg px-4">
-            Oferecemos uma gama completa de soluções em TI com foco em agilidade e confiança.
+          <h2 className="text-blue-500 font-bold tracking-widest uppercase mb-3 text-sm md:text-base">O que fazemos</h2>
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">Suporte direto em {LOCATION_FOCUS}</h3>
+          <p className="text-gray-600 text-base md:text-lg px-4 font-medium">
+            Trabalhamos com transparência. Você sabe exatamente o que está sendo feito no seu equipamento.
           </p>
         </div>
 
@@ -32,7 +31,7 @@ export const ServicesSection: React.FC = () => {
               <ul className="space-y-3 md:space-y-4 mb-8 flex-grow relative z-10">
                 {category.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-gray-700">
-                    <span className="text-blue-400 mt-1.5 flex-shrink-0"><i className="fas fa-circle text-[8px]"></i></span>
+                    <span className="text-green-500 mt-1.5 flex-shrink-0"><i className="fas fa-check text-xs"></i></span>
                     <span className="font-medium text-base md:text-lg">{item}</span>
                   </li>
                 ))}
@@ -42,9 +41,9 @@ export const ServicesSection: React.FC = () => {
                   href={getWhatsAppMessage(category.title)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-full py-4 px-6 bg-blue-50 text-blue-600 font-bold rounded-xl hover:bg-blue-500 hover:text-white transition-all group/btn shadow-sm active:scale-95"
+                  className="inline-flex items-center justify-center w-full py-4 px-6 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all group/btn shadow-md active:scale-95"
                 >
-                  <span>Solicitar Orçamento</span>
+                  <span>Orçamento pelo WhatsApp</span>
                   <i className="fab fa-whatsapp ml-2 group-hover/btn:scale-110 transition-transform text-lg"></i>
                 </a>
               </div>
@@ -53,6 +52,12 @@ export const ServicesSection: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="mt-16 text-center">
+          <p className="text-gray-500 italic">
+            * Atendimento presencial sujeito a agendamento para Embu-Guaçu e cidades vizinhas.
+          </p>
         </div>
       </div>
     </section>
